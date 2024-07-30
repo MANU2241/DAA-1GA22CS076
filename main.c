@@ -8,7 +8,7 @@ void dfs(int a[10][10],int n,int visited[10],int source)
    for(i=1;i<=n;i++)
    {
        if(a[source][i]==1 && visited[i]==0)
-        dfs(a,n,visited,i);
+               dfs(a,n,visited,i);
    }
    topo[++k]=source;
 }
@@ -34,9 +34,8 @@ int main()
 
         }
     }
-    printf("\nTopological ordering is\n");
-    for(i=k;i>=1;i--){
+    printf("\n topological ordering is" );
+    for(i=k;i>=1;i--)
         printf("%d\t",topo[i]);
-    }
     return 0;
 }
